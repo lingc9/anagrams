@@ -39,6 +39,6 @@ def make_anagrams_dict(words):
         if word_dict_key:
             anagrams_dict[word_dict_key].append(word)
         else:
-            anagrams_dict[word] = []
+            anagrams_dict[word] = [word]
 
     return anagrams_dict
