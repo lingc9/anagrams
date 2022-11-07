@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "Code style",
+      "setup": "sudo -H pip3 install flake8",
+      "run": "flake8",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 2,
+      "points": null
+    },
+    {
+      "name": "Unit tests",
+      "setup": "sudo -H pip3 install pytest numpy",
+      "run": "pytest -v",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 2,
+      "points": null
+    }
+  ]
+}
