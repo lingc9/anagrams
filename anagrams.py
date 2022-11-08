@@ -6,11 +6,7 @@ import sys
 
 def convert_to_list(file_path):
     my_file = open(file_path, "r")
-    # reading the file
     data = my_file.read()
-
-    # replacing end splitting the text 
-    # when newline ('\n') is seen.
     word_list = data.split("\n")
     my_file.close()
     return word_list
