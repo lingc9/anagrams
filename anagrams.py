@@ -5,15 +5,24 @@ import sys
 
 
 def convert_to_list(file_path):
-    word_list = [file_path]
+    my_file = open(file_path, "r")
+    # reading the file
+    data = my_file.read()
+
+    # replacing end splitting the text 
+    # when newline ('\n') is seen.
+    word_list = data.split("\n")
+    my_file.close()
     return word_list
 
 
-def output(word_list):
+def anagram_output(word_list):
     anagrams_dict = make_anagrams_dict(word_list)
-    for key in anagrams_dict.keys():
-        print(anagrams_dict[key])
+
+    for anagram in anagrams_dict.values():
+        print(anagram)
 
 
-list_1 = input("./" + str(sys.argv[1]))
-print(output(list_1))
+# list_1 = ["iceman", "cinema", "deposit", "cat", "bat", "act"]
+list_1 = convert_to_list("./" + str(sys.argv[1]))
+anagram_output(list_1)

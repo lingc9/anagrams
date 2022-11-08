@@ -34,11 +34,11 @@ def make_anagrams_dict(words):
 
     for word in words:
         word = word.lower()
-        word_dict_key = match_dict_key(word, anagrams_dict.keys())
+        key = ''.join(sorted(word))
 
-        if word_dict_key:
-            anagrams_dict[word_dict_key].append(word)
+        if key in anagrams_dict:
+            anagrams_dict[key].add(word)
         else:
-            anagrams_dict[word] = [word]
+            anagrams_dict[key] = {word}
 
     return anagrams_dict
