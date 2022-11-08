@@ -19,6 +19,5 @@ def anagram_output(word_list):
         print(anagram)
 
 
-# list_1 = ["iceman", "cinema", "deposit", "cat", "bat", "act"]
 list_1 = convert_to_list("./" + str(sys.argv[1]))
 anagram_output(list_1)
