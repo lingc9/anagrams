@@ -5,6 +5,8 @@ import sys
 
 
 def convert_to_list(file_path):
+    """Takes a given file and converts the text in it into a list. Expects each
+    word to have its own line."""
     my_file = open(file_path, "r")
     data = my_file.read()
     word_list = data.split("\n")
@@ -13,8 +15,11 @@ def convert_to_list(file_path):
 
 
 def anagram_output(word_list):
+    """Runs the function to find anagrams on a list of words and outputs the
+    results into a file named anagram_sets.txt, with each anagram printed on a
+    new line."""
     anagrams_dict = make_anagrams_dict(word_list)
-    file = open("anagrams.txt", "w")
+    file = open("anagram_sets.txt", "w")
 
     for anagram in anagrams_dict.values():
         file.write("'{}'\n".format(anagram))
