@@ -14,9 +14,12 @@ def convert_to_list(file_path):
 
 def anagram_output(word_list):
     anagrams_dict = make_anagrams_dict(word_list)
+    file = open("anagrams.txt", "w")
 
     for anagram in anagrams_dict.values():
-        print(anagram)
+        file.write("'{}'\n".format(anagram))
+
+    file.close()
 
 
 list_1 = convert_to_list("./" + str(sys.argv[1]))

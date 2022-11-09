@@ -46,4 +46,5 @@ def test_capitalization():
 
 
 def test_random():
+    # rand_int
     assert 1 == 1
