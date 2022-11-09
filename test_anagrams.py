@@ -8,8 +8,6 @@ list_5 = ["ICEMAN", "cinema"]
 list_6 = ["a", "A"]
 list_7 = []
 
-print(make_anagrams_dict(list_2))
-
 
 def test_lists():
     list_1_dict = make_anagrams_dict(list_1)
