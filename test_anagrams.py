@@ -8,7 +8,7 @@ list_5 = ["ICEMAN", "cinema"]
 list_6 = ["a", "A"]
 list_7 = []
 
-print(make_anagrams_dict(list_4))
+print(make_anagrams_dict(list_2))
 
 
 def test_lists():
@@ -43,8 +43,3 @@ def test_capitalization():
     list_6_dict = make_anagrams_dict(list_6)
     lower_6 = list_6[0].lower()
     assert list_6_dict[''.join(sorted(lower_6))] == {'a'}
-
-
-def test_random():
-    # rand_int
-    assert 1 == 1

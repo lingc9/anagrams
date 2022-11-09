@@ -2,24 +2,6 @@
 with the words grouped into anagram sets"""
 
 
-def match_dict_key(word, keys):
-    """When given a word find the key that is the same anagram. Return None
-    otherwise.
-
-    Parameters:
-        word (str): A word as a string.
-        keys (dict): Dictionary keys.
-
-    Returns:
-        key (str): Dictionary key that is an anagram of word.
-    """
-    for key in keys:
-        if sorted(word) == sorted(key):
-            return key
-
-    return None
-
-
 def make_anagrams_dict(words):
     """When given a list of strings, return a dictionary of anagrams.
 
